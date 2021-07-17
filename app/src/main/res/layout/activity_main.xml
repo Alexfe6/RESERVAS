@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="733dp">
+
+                <TextView
+                    android:id="@+id/textreserva"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal"
+                    android:text="Reserva"
+                    android:textSize="34sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="30dp" />
+
+                <EditText
+                    android:id="@+id/txtnombre"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="30dp"
+                    android:ems="10"
+                    android:gravity="left"
+                    android:hint="Nombre"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toTopOf="@+id/txtapellido"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textreserva" />
+
+                <EditText
+                    android:id="@+id/txtapellido"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="33dp"
+                    android:ems="10"
+                    android:gravity="left"
+                    android:hint="Apellido"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toTopOf="@+id/txtcorreo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtnombre" />
+
+                <EditText
+                    android:id="@+id/txtcorreo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="37dp"
+                    android:ems="10"
+                    android:gravity="left"
+                    android:hint="Correo electronico"
+                    android:inputType="textEmailAddress"
+                    app:layout_constraintBottom_toTopOf="@+id/txttelefono"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtapellido" />
+
+                <EditText
+                    android:id="@+id/txttelefono"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="58dp"
+                    android:ems="10"
+                    android:hint="Numero de telefono"
+                    android:inputType="phone"
+                    app:layout_constraintBottom_toTopOf="@+id/txtdia"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtcorreo" />
+
+                <Switch
+                    android:id="@+id/txtdia"
+                    android:layout_width="289dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="150dp"
+                    android:layout_marginRight="150dp"
+                    android:text="Reserva día"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txttelefono" />
+
+                <Switch
+                    android:id="@+id/txtnoche"
+                    android:layout_width="291dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="150dp"
+                    android:layout_marginRight="150dp"
+                    android:text="Reserva noche"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/txtfecha"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtdia" />
+
+                <EditText
+                    android:id="@+id/txtfecha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp"
+                    android:ems="10"
+                    android:hint="Fecha"
+                    android:inputType="date"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtnoche" />
+
+                <Button
+                    android:id="@+id/btnok"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_marginRight="100dp"
+                    android:text="Enviar"
+                    app:backgroundTint="#759CAA"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtfecha" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
